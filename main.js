@@ -7,14 +7,14 @@ formPedido.addEventListener('submit', function(e) {
   const nome = document.getElementById('nome').value;
   const hamburguer = document.getElementById('hamburguer').value;
   const quantidade = document.getElementById('quantidade').value;
-  const ingredientes = document.getElementById('ingredientes').value;
+  const adicional = document.getElementById('adicional').value;
 
   const pedido = {
     id: Date.now(),
     nome,
     hamburguer,
     quantidade,
-    ingredientes
+    adicional
   };
 
   pedidos.push(pedido);
@@ -31,7 +31,7 @@ function renderPedidos() {
       <h3>${pedido.nome}</h3>
       <p>Hamburguer: ${pedido.hamburguer}</p>
       <p>Quantidade: ${pedido.quantidade}</p>
-      <p>Ingredientes: ${pedido.ingredientes}</p>
+      <p>Adicional: ${pedido.adicional}</p>
       <button class="editar-btn" onclick="editarPedido(${pedido.id})">Editar Pedido</button>
       <button onclick="excluirPedido(${pedido.id})">Finalizar Pedido</button>
     `;
@@ -51,13 +51,13 @@ function editarPedido(id) {
   const novoNome = prompt('Digite o novo nome:', pedidoParaEditar.nome);
   const novoHamburguer = prompt('Digite o novo hamburguer:', pedidoParaEditar.hamburguer);
   const novaQuantidade = prompt('Digite a nova quantidade:', pedidoParaEditar.quantidade);
-  const novaIngredientes = prompt('Digite a nova quantidade:', pedidoParaEditar.ingredientes);
+  const novaAdicional = prompt('Digite um novo adicional:', pedidoParaEditar.adicional);
 
-  if (novoNome && novoHamburguer && novaQuantidade) {
+  if (novoNome && novoHamburguer && novaQuantidade && novaAdicional) {
     pedidoParaEditar.nome = novoNome;
     pedidoParaEditar.hamburguer = novoHamburguer;
     pedidoParaEditar.quantidade = novaQuantidade;
-    pedidoParaEditar.ingredientes = novaIngredientes;
+    pedidoParaEditar.adicional = novaAdicional;
     renderPedidos();
   }
 }
