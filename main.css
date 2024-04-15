@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(/img/fundtemplate.png);
+  background-size: cover;
+}
+
+.nameplace {
+  h1 {
+    text-decoration: overline #007bff;
+    color: white;
+  }
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.menu {
+  max-width: 480px;
+  height: 180px;
+  margin: 20px;
+  padding: 5px 20px 100px;
+  border: 1px solid #ccc;
+  color: black;
+  font-size: 14px;
+  background-color: white;
+
+  p {
+    font-size: 10px;
+  }
+}
+
+.card {
+  font-size: 8px;
+  @media (max-width: 800px) {
+    h1{
+      font-size: 14px;
+    }
+  }
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 97%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.pedido {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pedido h3 {
+  margin-top: 0;
+}
+
+.editar-btn {
+  background-color: #ffc107;
+}
