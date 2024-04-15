@@ -29,8 +29,8 @@ function renderPedidos() {
       <h3>${pedido.nome}</h3>
       <p>Hamburguer: ${pedido.hamburguer}</p>
       <p>Quantidade: ${pedido.quantidade}</p>
-      <button class="editar-btn" onclick="editarPedido(${pedido.id})">Editar</button>
-      <button onclick="excluirPedido(${pedido.id})">Excluir</button>
+      <button class="editar-btn" onclick="editarPedido(${pedido.id})">Editar Pedido</button>
+      <button onclick="excluirPedido(${pedido.id})">Finalizar Pedido</button>
     `;
     pedidosContainer.appendChild(pedidoElemento);
   });
